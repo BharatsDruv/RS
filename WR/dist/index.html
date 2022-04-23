@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Webservice Recommender</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="user">
+    <header class="user__header">
+        <img src="ws.png" width="20%" height="20%" alt="" />
+        <h1 >Webservice Recommender</h1>
+    </header>
+    
+    <form id="myForm" class="form" >
+        <div class="form__group">
+            <input id="N" type="text" placeholder="No. of webservices you want to get recommandations:" class="form__input" />
+        </div>
+        <div class="form__group">
+            <input id="rt" type="text" placeholder="Enter Value for Response Time (1-10):" class="form__input" />
+        </div>
+        <div class="form__group">
+            <input id="av" type="text" placeholder="Enter Value for Availability (1-10):" class="form__input" />
+        </div>
+        <div class="form__group">
+            <input id="tp" type="text" placeholder="Enter Value for Throughput (1-10):" class="form__input" />
+        </div>
+        <div class="form__group">
+            <input id="sc" type="text" placeholder="Enter Value for Successability (1-10):" class="form__input" />
+        </div>
+        <div class="form__group">
+            <input id="rl" type="text" placeholder="Enter Value for Reliability (1-10):" class="form__input" />
+        </div>
+        <div class="form__group">
+            <input id="cp" type="text" placeholder="Enter Value for Compliance (1-10):" class="form__input" />
+        </div>
+        <div class="form__group">
+            <input id="bp" type="text" placeholder="Enter Value for Best Practices (1-10):" class="form__input" />
+        </div>
+        <div class="form__group">
+            <input id="lt" type="text" placeholder="Enter Value for Latency (1-10):" class="form__input" />
+        </div>
+        <button class="btn" type="submit" >Recommend</button>
+    </form>
+</div>
+<!-- partial -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+  <script  src="./script.js"></script>
+  
+
+</body>
+</html>
