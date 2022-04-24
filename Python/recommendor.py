@@ -151,15 +151,16 @@ class Recommendor:
 # creating a Flask app
 app = Flask(__name__)
 
-cors = CORS(app, resources={r"/test": {"origins": "*"}})
+cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
-@cross_origin(origin='*',headers=['Content-Type','Authorization'])
+
 @app.route('/test', methods=['POST'])
+@cross_origin()
 def index():
-    headers = {"Content-Type": "text/plain","Accept":"text/plain"}
-    values = list(map(int,request.form.get('values').split()))
-    print(values)
-    return jsonify(values)
+    # headers = {"Content-Type": "text/plain","Accept":"text/plain"}
+    # values = list(map(int,request.form.get('values').split()))
+    print(request.data)
+    return request.data
     # return "<h1>Welcome to our server !!</h1>"
   
 # on the terminal type: curl http://127.0.0.1:5000/
